@@ -1,0 +1,187 @@
+// string
+console.log("Hello World!!")
+
+let firstName = "Rohit"
+let lastName = "Panghal"
+console.log(firstName, lastName)
+
+// String Concatiation
+// method 1 "+" operator 
+let fullName = firstName + lastName
+console.log(fullName)
+
+// method 2 using Template literals
+
+let completeName = `I'm ${firstName} ${lastName}`
+console.log(completeName)
+
+// Getting string character
+console.log(firstName[4])
+
+// String Methods
+console.log(firstName.toLowerCase())
+console.log(lastName.toUpperCase())
+console.log(firstName.indexOf("t"))
+
+
+let hobbies = "            coding running reading      "
+// trim method
+let result = hobbies.trim()
+console.log(hobbies)
+console.log(result)
+
+// indexOf
+console.log(result.lastIndexOf("Reading")) // case sensitive
+
+// include method
+console.log(result.includes("runNing")) // case sensitive
+
+// slice method
+let compName = "rohitpanghal"
+console.log(compName.slice(0,6)) // excluding the last one index 0-5 include
+
+// imp note does not mutate orginal string
+console.log("original String = ", fullName)
+console.log("Extracted String = ", result)
+
+
+// String split method
+let favraiteColor = "Brown Black Blue Grey"
+let arrColor = favraiteColor.split(" ");
+//string to array converstion
+console.log(arrColor)
+
+
+// javaScript String are Imutable
+
+let str = "Hello"
+
+str[0] = "R";
+str[3] = "O";
+//there will no change in str variables
+
+console.log(str)
+
+
+//Number
+let score = 50;
+console.log(score , typeof score)
+
+// Mathmatical operators * / % ** + -
+// let results = score / 2; // gives Quotient 
+//let results = score % 2; // gives remainder
+
+// mathematical Expression
+let results = score * 2 + (4*3) - 8 / 2 % 4;  // 100+12-0 = 112
+// using priority and precedence 
+// 1 () brackets
+// 2 ** Power operators
+// 3 * / % (from left to right)
+// 4 + - (from left to right)
+
+console.log(results)
+
+
+// concatination of number to string
+let resultLine = "my total score is = " + results;
+console.log(resultLine)
+
+
+//loose equality(==) Vs strict equality operator (===)
+
+// loose equality operator (==)
+let age = 22; // number type value
+console.log(age == "22") // focus only on value not type
+
+// strict equality operator (===)
+console.log(age === "22") // focus on both value and type
+console.log(age !== "22")
+
+
+//Type Conversion
+let stringType = "54";
+console.log(stringType, typeof stringType)
+
+// number method
+let numberType = Number(stringType);
+console.log(numberType , typeof numberType)
+//imp note  IN the number method passing string must be of numeric values
+
+
+let numberTyp = 54;
+console.log(typeof numberTyp)
+//string method
+let stringTyp = String(numberTyp);
+console.log(stringTyp , typeof stringTyp)
+
+
+// boolean Method true/false
+
+let aage = 32;  // empty string is false all others are true and number mein 0 false
+let booleanValueOfAge = Boolean(aage);
+console.log("Boolean value of age = ",booleanValueOfAge)
+
+
+// Array
+
+let dishes = ["Biryani" , "Chat" , "Parathay"];
+
+// access
+console.log(dishes[0]) // by indexing system
+
+//modfiy the array
+dishes[0] = "karahai";
+console.log(dishes) 
+
+
+// array method
+
+// join method
+console.log(dishes.join("-"))
+
+// indexOf
+console.log(dishes.indexOf("ChaA4t")) // case sensitve 
+
+
+// concate method array + array
+let newDishes = ["sweet-dish", "pani-pori"];
+console.log(dishes.concat(newDishes))
+let updatedDishes = dishes.concat(newDishes) 
+
+// length method
+console.log(updatedDishes.length)
+
+//push method  --- mutator method
+console.log(updatedDishes.push("Bhallay")) //return value length of the array
+
+console.log(updatedDishes)
+
+
+// pop method
+console.log(dishes.pop())
+
+console.log(dishes)
+
+
+// boolean values and comparision operator
+let booleanType = true;
+let stringTy ="true";
+console.log(typeof booleanType , typeof stringTy)
+
+// methods return boolean value
+    let email = "panghalrohit2003@example.com";
+
+    let booleanValue = email.includes("@");
+    console.log(booleanValue)
+
+
+// comparision operators always return booloean value
+// == , != , === ,!==
+// > , >=
+// < , <=
+
+let points = 23
+console.log(points == "23")
+console.log(points === "23")
+console.log(points != 34)
+console.log(points > 10)
